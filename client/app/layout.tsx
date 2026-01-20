@@ -14,9 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description:
-    "The home of our UI systems, icons, and design-focused web projects.",
+  title: "Immersive Garden",
+  description: "Crafting immersive, design-driven web experiences and tools.",
 };
 
 export default function RootLayout({
