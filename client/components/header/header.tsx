@@ -6,7 +6,7 @@ const navItemClass =
   "group relative text-(--muted-foreground) hover:text-(--foreground) transition-colors duration-100";
 
 const navButtonClass =
-  "flex items-center gap-0.75 py-1.5 px-3 text-(--muted-foreground) hover:text-(--foreground) transition-colors duration-100";
+  "cursor-pointer flex items-center gap-0.75 py-1.5 px-3 text-(--muted-foreground) hover:text-(--foreground) transition-colors duration-100";
 
 const navIconClass =
   "rotate-0 transition-transform ease-in-out duration-200 group-hover:rotate-180";
@@ -42,14 +42,7 @@ export const Header = () => {
               {headerLinksConfig.sections.map((section) => (
                 <li key={section.key} className={navItemClass}>
                   {section.sections ? (
-                    <button className={navButtonClass}>
-                      {section.title}
-                      {section.icon && (
-                        <span className={navIconClass}>
-                          <section.icon size={14} />
-                        </span>
-                      )}
-                    </button>
+                    <button className={navButtonClass}>{section.title}</button>
                   ) : section.href ? (
                     <Link href={section.href} className={navLinkClass}>
                       {section.title}
