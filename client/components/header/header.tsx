@@ -30,7 +30,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`h-(--header-height) w-full transition-all duration-300 bg-background sticky top-0 z-40 ${isScrolled ? "after:content-[''] after:absolute after:h-px after:w-full after:bg-(--muted) after:bottom-0" : ""}`}
+      className={`h-(--header-height) w-full transition-all duration-300 bg-background sticky top-0 z-40 ${isScrolled ? "after:content-[''] after:absolute after:h-px after:w-full after:bg-(--border) after:bottom-0" : ""}`}
     >
       <div className="flex items-center h-full max-w-360 mx-auto px-6">
         <div className="flex items-center justify-between w-full">
