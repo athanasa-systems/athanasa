@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { footerLinksConfig } from "@/configs/footer-links-config";
+import { ThemeSwitcher } from "../theme/theme-switcher";
 
 const sectionTitleClass = "text-sm font-medium text-(--foreground) mb-4";
 
@@ -33,8 +34,11 @@ export const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="mt-12 pt-6 border-t border-(--border) text-sm">
-          © {new Date().getFullYear()} Athanasa. All rights reserved.
+        <div className="flex justify-between items-center mt-12 pt-6 border-t border-(--border)">
+          <span>
+            © {new Date().getFullYear()} Athanasa. All rights reserved.
+          </span>
+          <ThemeSwitcher />
         </div>
       </div>
     </footer>
