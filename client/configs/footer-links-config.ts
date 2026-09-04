@@ -149,8 +149,8 @@ export const footerLinksConfig: FooterLinksConfig = {
       ],
     },
     {
-      key: "legal",
-      title: "Legal",
+      key: "legal-and-trust",
+      title: "Legal & Trust",
       links: [
         {
           key: "privacy-policy",

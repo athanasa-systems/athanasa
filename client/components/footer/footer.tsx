@@ -34,7 +34,7 @@ export const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-between items-center mt-12 pt-6 border-t border-(--border)">
+        <div className="flex justify-between items-center mt-12">
           <span>
             © {new Date().getFullYear()} Athanasa. All rights reserved.
           </span>
