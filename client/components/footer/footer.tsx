@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { footerLinksConfig } from "@/configs/footer-links-config";
+import { LanguageSwitcher } from "../language/language-switcher";
+import { StatusLink } from "../status/status-link";
 import { ThemeSwitcher } from "../theme/theme-switcher";
 
 const sectionTitleClass = "text-sm font-medium text-(--foreground) mb-4";
 
 const linkClass =
-  "text-sm text-(--muted-foreground) hover:text-(--foreground) transition-colors duration-100";
+  "inline-flex h-fit text-sm text-(--muted-foreground) hover:text-(--foreground) transition-colors duration-100";
 
 export const Footer = () => {
   return (
@@ -15,9 +17,9 @@ export const Footer = () => {
           {footerLinksConfig.sections.map((section) => (
             <div key={section.key}>
               <h3 className={sectionTitleClass}>{section.title}</h3>
-              <ul className="flex flex-col gap-3 list-none p-0 m-0">
+              <ul className="flex flex-col gap-2 list-none p-0 m-0">
                 {section.links.map((link) => (
-                  <li key={link.key}>
+                  <li key={link.key} className="flex h-7 items-center">
                     <Link
                       href={link.href}
                       className={linkClass}
@@ -35,10 +37,13 @@ export const Footer = () => {
           ))}
         </div>
         <div className="flex justify-between items-center mt-12">
-          <span>
-            © {new Date().getFullYear()} Athanasa. All rights reserved.
-          </span>
-          <ThemeSwitcher />
+          <div className="flex items-center gap-3">
+            <StatusLink />
+          </div>
+          <div className="flex items-center gap-3">
+            <ThemeSwitcher />
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </footer>
